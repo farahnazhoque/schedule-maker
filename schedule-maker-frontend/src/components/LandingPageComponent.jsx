@@ -1,18 +1,8 @@
-import React, { useEffect } from 'react';
-import './App.css';
-import LineImage from './assets/Line 1.png';
+import React from 'react';
+import '../css/LandingPageStyle.css';
+import LineImage from '../assets/Line 1.png';
 
-function App() {
-  useEffect(() => {
-    // Disable scrolling on mount
-    document.body.style.overflow = 'hidden';
-    
-    // Re-enable scrolling on unmount, if needed
-    return () => {
-      document.body.style.overflow = 'unset';
-    };
-  }, []);
-
+function LandingPageComponent() {
   return (
     <>
       <div className="video-background">
@@ -23,7 +13,7 @@ function App() {
           loop
           className="min-w-full min-h-full object-cover"
         >
-          <source src="./src/assets/LandingPage.mp4" type="video/mp4" />
+          <source src="../assets/LandingPage.mp4" type="video/mp4" />
         </video>
       </div>
       <div className='grid grid-flow-row-dense grid-cols-3 grid-rows-3'>
@@ -50,7 +40,7 @@ function App() {
           <div className="pt-[2vh] pl-[2vw]">
             <img src={LineImage} alt="Line" className="object-cover h-10 w-2" />
           </div>
-          <button>
+          <button onClick={LogIn}>
             Log In
           </button>
         </div>
@@ -59,5 +49,8 @@ function App() {
   );
 }
 
-export default App;
+async function LogIn() {
+  // Implement login functionality here
+}
 
+export default LandingPageComponent;
