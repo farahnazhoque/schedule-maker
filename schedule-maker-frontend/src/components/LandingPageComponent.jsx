@@ -1,6 +1,6 @@
 import React from 'react';
 import '../css/LandingPageStyle.css';
-import LineImage from '../assets/Line 1.png';
+import LineImage from "../../public/assets/Line 1.png"
 
 function LandingPageComponent() {
   return (
@@ -13,7 +13,7 @@ function LandingPageComponent() {
           loop
           className="min-w-full min-h-full object-cover"
         >
-          <source src="../assets/LandingPage.mp4" type="video/mp4" />
+          <source src="../../public/assets/LandingPage.mp4" type="video/mp4" />
         </video>
       </div>
       <div className='grid grid-flow-row-dense grid-cols-3 grid-rows-3'>
